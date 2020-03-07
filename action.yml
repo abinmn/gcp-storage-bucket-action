@@ -1,0 +1,24 @@
+name: 'GCP Cloud Storage: Deploy'
+description: 'This action helps in deploying static websites on the Google Cloud Storage Bucket.'
+author: 'Abin Mn'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+inputs:
+  service_key:
+    description: 'GCP service key encoded as base64. The account associated with the key should have permissions to make changes in storage bucket.'
+    required: true
+  project:
+    description: 'Name of the project that contains the storage bucket.'
+    required: true
+  home_page_path:
+    description: 'Path of your homepage in cloud storage bucket.'
+    required: true
+  error_page_path:
+    description: 'Path of the 404 page to be shown'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  
+  
