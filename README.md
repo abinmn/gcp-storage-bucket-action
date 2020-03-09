@@ -11,6 +11,7 @@ Follow <a href="https://cloud.google.com/storage/docs/hosting-static-website">th
 On your workflow file,
 ```
 - name: Deploy
+  uses: actions/checkout@v2
   uses: abinmn/gcp-storage-bucket-action
   with:
     service_key: base64 encoded gcp service account key
