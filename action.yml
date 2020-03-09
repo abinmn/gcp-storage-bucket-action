@@ -12,6 +12,9 @@ inputs:
     description: 'The folder you want to deploy. Default is the repository. You can change this value if you have a build step and point this to that build folder.'
     required: false
     default: $GITHUB_WORKSPACE
+  bucket_name:
+    description: 'Bucket name'
+    required: true
   project:
     description: 'Name of the project that contains the storage bucket.'
     required: true
