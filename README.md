@@ -18,7 +18,7 @@ On your workflow file,
     project: Name of the project that contains the storage bucket.
     home_page_path: Path of your homepage in cloud storage bucket
     error_page_path: Path of the 404 page to be shown
-    build_folder: Path of the file to host. Default is the repository
+    build_folder: Path of the file to host. Use "${{ github.workspace }}" for the repository.
 ```
 
 ## base64 encode service key
