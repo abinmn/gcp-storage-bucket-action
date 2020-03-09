@@ -8,6 +8,10 @@ inputs:
   service_key:
     description: 'GCP service key encoded as base64. The account associated with the key should have permissions to make changes in storage bucket.'
     required: true
+  build_folder:
+    description: 'The folder you want to deploy. Default is the repository. You can change this value if you have a build step and point this to that build folder.'
+    required: false
+    default: $GITHUB_WORKSPACE
   project:
     description: 'Name of the project that contains the storage bucket.'
     required: true
