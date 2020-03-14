@@ -1,0 +1,17 @@
+name: Action test
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to GCP
+      uses: ./
+      with:
+        service-key: test-service-key
+        project: test-project
+        bucket-name: test-bucket-name
